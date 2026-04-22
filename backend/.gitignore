@@ -1,0 +1,66 @@
+# ─── ORBIT-EDU .gitignore ─────────────────────────────────────────────────────
+# Files listed here are IGNORED by Git (never pushed to GitHub).
+# This protects secret keys and keeps your repo clean.
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.whl
+
+# ── Virtual Environment ───────────────────────────────────────────────────────
+# The virtual environment folder (named venv, env, .venv, etc.)
+# Railway installs packages itself from requirements.txt
+venv/
+env/
+ENV/
+.env/
+.venv/
+
+# ── Environment Variables ─────────────────────────────────────────────────────
+# Your .env file contains SECRET_KEY and NASA_API_KEY — never push this!
+.env
+*.env
+
+# ── Django ────────────────────────────────────────────────────────────────────
+# The SQLite database (Railway uses its own storage)
+db.sqlite3
+db.sqlite3-journal
+
+# Collected static files (Railway runs collectstatic itself)
+staticfiles/
+
+# Django migrations (we DO commit these — they define our DB structure)
+# *.py inside migrations/ are included (do NOT add migrations/ here)
+
+# ── VS Code ───────────────────────────────────────────────────────────────────
+.vscode/
+*.code-workspace
+
+# ── macOS ─────────────────────────────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ── Windows ───────────────────────────────────────────────────────────────────
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ── Logs ──────────────────────────────────────────────────────────────────────
+*.log
+logs/
